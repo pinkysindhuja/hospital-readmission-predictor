@@ -1,116 +1,39 @@
-# Hospital Readmission Predictor
-
-A Hackathon project to predict hospital readmissions using Machine Learning, Flask, and React.
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Overview
-
-This project aims to predict hospital readmissions using historical patient data. By leveraging machine learning models, healthcare providers can identify patients at high risk of readmission and take preventive measures, improving outcomes and reducing costs.
-
-## Features
-
-- Predicts patient readmission probability
-- User-friendly web interface built with React
-- RESTful API powered by Flask
-- Data visualization and insights
-- Machine learning model training and evaluation
-- Responsive design
-
-## Tech Stack
-
-- **Frontend:** React, JavaScript, EJS, CSS
-- **Backend:** Flask (Python)
-- **Machine Learning:** Scikit-learn, Pandas, Numpy
-- **Other:** EJS templates
-
-## Getting Started
-
-### Prerequisites
-
-- Python 3.x
-- Node.js and npm
-- pipenv or virtualenv (optional, for Python environment management)
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/pinkysindhuja/hospital-readmission-predictor.git
-   cd hospital-readmission-predictor
-   ```
-
-2. **Set up the backend**
-   ```bash
-   cd backend
-   pip install -r requirements.txt
-   # or using pipenv
-   pipenv install
-   ```
-
-3. **Set up the frontend**
-   ```bash
-   cd ../frontend
-   npm install
-   ```
-
-### Running the Application
-
-1. **Start the backend server**
-   ```bash
-   cd backend
-   flask run
-   ```
-
-2. **Start the frontend development server**
-   ```bash
-   cd frontend
-   npm start
-   ```
-
-3. Visit [http://localhost:3000](http://localhost:3000) to access the application.
-
-## Usage
-
-- Upload patient data or enter manually via the frontend.
-- View prediction results and risk insights.
-- Explore visualizations and reports.
-
-## Project Structure
-
-```
-hospital-readmission-predictor/
-├── backend/           # Flask API and ML models
-│   ├── app.py
-│   ├── models/
-│   ├── requirements.txt
-│   └── ...
-├── frontend/          # React frontend app
-│   ├── src/
-│   ├── public/
-│   └── package.json
-├── templates/         # EJS templates
-├── static/            # Static files (CSS, JS)
-└── README.md
-```
-
-## Contributing
-
-Contributions are welcome! Please open issues or submit pull requests for enhancements or bug fixes.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+Hospital Readmission Prediction
+it is an intelligent platform that predicts patient readmission risk using machine learning. It helps hospitals monitor and reduce avoidable readmissions through real-time analytics and risk assessment.
 
 ---
 
-*Hackathon project by [pinkysindhuja](https://github.com/pinkysindhuja)*
+## Features
+
+- Live dashboard displaying risk distribution and readmission trends
+- Patient-centric risk prediction and history tracking
+- Machine learning based prediction API using Python Flask
+- Node.js backend with Express and MongoDB
+- Interactive charts with Chart.js for data visualization
+- Secure patient data management and analytics
+---
+## Technologies Used
+- Node.js, Express.js
+- MongoDB (Atlas or local)
+- Python, Flask for prediction API
+- Axios for API communication
+- Chart.js for frontend charts
+- Bootstrap 5 for UI styling
+### Prerequisites
+- Node.js (v14+)
+- Python 3.x
+- MongoDB instance (local or MongoDB Atlas)
+- Git
+### Installation
+1. Clone the repository:
+2. Install Node.js dependencies:
+3. Install Python dependencies in the prediction API folder:
+4. Setup environment variables:
+Create a `.env` file in the root with variables:
+---
+## Running Locally
+You can run both services simultaneously using `concurrently`:
+This runs:
+- Node.js backend on `http://localhost:3000`
+- Flask prediction API on `http://localhost:5000`
+

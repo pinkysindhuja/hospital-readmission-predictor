@@ -2,16 +2,18 @@
 
 <h2>Prediction Result</h2>
 
-<div class="card">
+<div class="card kk">
   <div class="card-body">
-    <h5 class="card-title">Readmission Risk: 
+    <h5 class="card-title mt-3 nk">Readmission Risk: 
       <% if (patient.readmitted === 'yes') { %>
         <span class="badge bg-danger">High Risk</span>
       <% } else { %>
         <span class="badge bg-success">Low Risk</span>
       <% } %>
     </h5>
-    <p><strong>Patient Details:</strong></p>
+    <p class="mt-3 kn"><strong>Patient Details:</strong></p>
+    <div class="row g-3 vk ">
+    <div class="col-md-5">
     <ul>
       <li>Age Group: <%= patient.age %></li>
       <li>Time in Hospital: <%= patient.time_in_hospital %> days</li>
@@ -21,6 +23,10 @@
       <li>Outpatient Visits: <%= patient.n_outpatient %></li>
       <li>Inpatient Visits: <%= patient.n_inpatient %></li>
       <li>Emergency Visits: <%= patient.n_emergency %></li>
+      </ul>
+      </div>
+      <div class="col-md-6">
+      <ul>
       <li>Medical Specialty: <%= patient.medical_specialty %></li>
       <li>Primary Diagnosis: <%= patient.diag_1 %></li>
       <li>Secondary Diagnosis: <%= patient.diag_2 %></li>
@@ -30,7 +36,8 @@
       <li>Medication Change: <%= patient.change %></li>
       <li>Diabetes Medication: <%= patient.diabetes_med %></li>
     </ul>
-
+    </div>
+  <div class="mt-3 mm">
     <a href="/patients/input" class="btn btn-primary">Make Another Prediction</a>
     <a href="/patients/history" class="btn btn-secondary">View Patient History</a>
   </div>

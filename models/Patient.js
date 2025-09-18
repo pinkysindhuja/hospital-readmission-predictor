@@ -17,7 +17,8 @@ const patientSchema = new mongoose.Schema({
   A1Ctest: String,
   change: String,
   diabetes_med: String,
-  readmitted: String,  // Store prediction result ("yes" or "no")
+  readmitted: String, 
+  riskLevel: String, // Store prediction result ("yes" or "no")
   createdAt: {
     type: Date,
     default: Date.now,
