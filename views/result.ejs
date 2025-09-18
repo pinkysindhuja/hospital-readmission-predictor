@@ -1,0 +1,39 @@
+<%- include('partials/header'); %>
+
+<h2>Prediction Result</h2>
+
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Readmission Risk: 
+      <% if (patient.readmitted === 'yes') { %>
+        <span class="badge bg-danger">High Risk</span>
+      <% } else { %>
+        <span class="badge bg-success">Low Risk</span>
+      <% } %>
+    </h5>
+    <p><strong>Patient Details:</strong></p>
+    <ul>
+      <li>Age Group: <%= patient.age %></li>
+      <li>Time in Hospital: <%= patient.time_in_hospital %> days</li>
+      <li>Number of Lab Procedures: <%= patient.n_lab_procedures %></li>
+      <li>Number of Procedures: <%= patient.n_procedures %></li>
+      <li>Number of Medications: <%= patient.n_medications %></li>
+      <li>Outpatient Visits: <%= patient.n_outpatient %></li>
+      <li>Inpatient Visits: <%= patient.n_inpatient %></li>
+      <li>Emergency Visits: <%= patient.n_emergency %></li>
+      <li>Medical Specialty: <%= patient.medical_specialty %></li>
+      <li>Primary Diagnosis: <%= patient.diag_1 %></li>
+      <li>Secondary Diagnosis: <%= patient.diag_2 %></li>
+      <li>Tertiary Diagnosis: <%= patient.diag_3 %></li>
+      <li>Glucose Test: <%= patient.glucose_test %></li>
+      <li>A1C Test: <%= patient.A1Ctest %></li>
+      <li>Medication Change: <%= patient.change %></li>
+      <li>Diabetes Medication: <%= patient.diabetes_med %></li>
+    </ul>
+
+    <a href="/patients/input" class="btn btn-primary">Make Another Prediction</a>
+    <a href="/patients/history" class="btn btn-secondary">View Patient History</a>
+  </div>
+</div>
+
+<%- include('partials/footer'); %>
